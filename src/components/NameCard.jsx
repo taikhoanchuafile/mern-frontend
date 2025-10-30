@@ -23,7 +23,7 @@ const NameCard = ({ name, index, handleNameAdded }) => {
 
   const updateNameInput = async () => {
     try {
-      await api.put(`/names/${name._id}`, { name: nameInput });
+      await api.put(`/api/names/${name._id}`, { name: nameInput });
       toast.success("Cập nhật tên thành công!");
       setIsEditting(false);
       handleNameAdded();
@@ -35,7 +35,7 @@ const NameCard = ({ name, index, handleNameAdded }) => {
 
   const deleteNameInput = async () => {
     try {
-      await api.delete(`/names/${name._id}`);
+      await api.delete(`/api/names/${name._id}`);
       toast.success("Xóa tên thành công!");
       handleNameAdded();
     } catch (error) {

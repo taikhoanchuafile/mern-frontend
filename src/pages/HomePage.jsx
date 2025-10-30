@@ -17,7 +17,7 @@ const HomePage = () => {
 
   const fetchName = async () => {
     try {
-      const res = await api.get("/names");
+      const res = await api.get("/api/names");
       setNameBuffer(res.data);
       console.log(res.data);
     } catch (error) {

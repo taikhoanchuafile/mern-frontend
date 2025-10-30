@@ -8,7 +8,7 @@ const AddName = ({ handleNameAdded }) => {
   const [name, setName] = useState("");
   const addName = async () => {
     try {
-      await api.post("/names", { name: name });
+      await api.post("/api/names", { name: name });
       toast.success("Thêm tên mới thành công!");
       setName("");
       handleNameAdded();
